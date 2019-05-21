@@ -3,9 +3,11 @@
 one:
   username: MyString
   email: MyString
+  bio: MyString
   password_digest: MyString
 
 two:
   username: MyString
   email: MyString
+  bio: MyString
   password_digest: MyString
