@@ -15,8 +15,10 @@ module Mutations
         return unless user
         return unless user.authenticate(email[:password])
   
-        crypt = ActiveSupport::MessageEncryptor.new(Rails.application.credentials.secret_key_base.byteslice(0..31))
-        token = crypt.encrypt_and_sign("user-id:#{ user.id }")
+        #crypt = ActiveSupport::MessageEncryptor.new(Rails.application.credentials.secret_key_base.byteslice(0..31))
+        #token = crypt.encrypt_and_sign("user-id:#{ user.id }")
+        token = JsonWebToken.encode(user_id: user.id)
+
   
         { user: user, token: token }
       end
