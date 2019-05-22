@@ -10,11 +10,13 @@ module Types
     def all_users
       User.all
     end
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+
+    field :current_user_tweets, [TweetType], null: false
+
+    # this method is invoked, when `all_link` fields is being resolved
+    def current_user_tweets
+      Tweet.where(:user_id => context[:current_user])
     end
+    
   end
 end
