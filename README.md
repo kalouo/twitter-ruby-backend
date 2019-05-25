@@ -6,7 +6,13 @@
 bundle install
 ```
 
-### 2. Start The Development Server
+## 1. Run Database Migrations
+
+```
+rails db:migrate
+```
+
+### 3. Start The Development Server
 
 ```
 rails server
