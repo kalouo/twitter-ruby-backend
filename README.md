@@ -1,24 +1,17 @@
-# README
+# Twitter Backend Built With Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. Install Dependencies
 
-Things you may want to cover:
+```
+bundle install
+```
 
-* Ruby version
+### 2. Start The Development Server
 
-* System dependencies
+```
+rails server
+```
 
-* Configuration
+This will render the page on http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The repo for the client built with Vue is [here](https://github.com/okalouti/twitter-vue-frontend).
